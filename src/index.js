@@ -1,3 +1,5 @@
+const { LogOutput } = require("concurrently");
+
 const siteContent = { // DO NOT CHANGE THIS OBJECT
   "nav": {
     "nav-item-1": "Services",
@@ -40,3 +42,42 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+const container = document.querySelector('.container');
+
+const headerEl = document.querySelector('header');
+container.prepend(headerEl);
+headerEl.style.display = 'flex';
+headerEl.style.justifyContent = 'center';
+
+const navLinks = document.querySelector('nav');
+headerEl.appendChild(navLinks);
+const navItem1 = document.createElement('a');
+navItem1.textContent = "Services";
+navItem1.href = "#";
+navLinks.appendChild(navItem1);
+const navItem2 = document.createElement('a');
+navItem2.textContent = 'Product';
+navItem2.href = '#';
+navLinks.appendChild(navItem2);
+const navItem3 = document.createElement('a');
+navItem3.textContent = 'Vision';
+navItem3.href = '#';
+navLinks.appendChild(navItem3);
+const navItem4 = document.createElement('a');
+navItem4.textContent = 'Features';
+navItem4.href = '#';
+navLinks.appendChild(navItem4);
+const navItem5 = document.createElement('a');
+navItem5.textContent = 'About';
+navItem5.href = '#';
+navLinks.appendChild(navItem5);
+const navItem6 = document.createElement('a');
+navItem6.textContent = 'Contact';
+navItem6.href = '#';
+navLinks.appendChild(navItem6);
+
+const headerImg = document.createElement('img');
+headerImg.src = 'http://localhost:9000/img/logo.png';
+headerEl.appendChild(headerImg);
+
