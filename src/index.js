@@ -45,6 +45,8 @@ console.log('project wired!')
 
 const container = document.querySelector('.container');
 
+// header section
+
 const headerEl = document.querySelector('header');
 container.prepend(headerEl);
 headerEl.style.display = 'flex';
@@ -91,3 +93,39 @@ const ctaButton = document.querySelector('.cta button');
 ctaButton.textContent = 'Get Started';
 const ctaImg = document.querySelector('#cta-img');
 ctaImg.src = 'http://localhost:9000/img/cta.png';
+
+// main-content section
+
+const mainSection = document.querySelector('.main-content');
+const mainDiv = document.querySelector('.top-content');
+const textDiv = document.querySelector('.text-content');
+const featuresSub = document.querySelector('.top-content h4');
+featuresSub.textContent = 'Features';
+const featuresPar = document.querySelector('.top-content p');
+featuresPar.textContent = siteContent["main-content"]["features-content"];
+// const aboutSub = document.querySelector()
+
+const middleImg = document.querySelector('#middle-img');
+middleImg.src = 'http://localhost:9000/img/accent.png';
+
+const bottomDiv = document.querySelector('.bottom-content');
+const servicesSub = document.querySelector('.bottom-content h4');
+servicesSub.textContent = 'Services';
+const servicesPar = document.querySelector('.bottom-content p'); 
+servicesPar.textContent = siteContent["main-content"]["services-content"];
+
+// contact section
+
+const contactSection = document.querySelector('.contact');
+const contactSub = document.querySelector('.contact h4');
+contactSub.textContent = 'Contact';
+const contactPar1 = document.querySelector('.contact p');
+contactPar1.textContent = siteContent.contact.address;
+
+//footer
+
+const footerSection = document.querySelector('footer');
+const footerLink = document.querySelector('footer a');
+footerLink.textContent = siteContent.footer.copyright;
+footerLink.href = '#';
+
