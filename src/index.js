@@ -1,4 +1,4 @@
-const { LogOutput } = require("concurrently");
+// const { LogOutput } = require("concurrently");
 
 const siteContent = { // DO NOT CHANGE THIS OBJECT
   "nav": {
@@ -77,7 +77,17 @@ navItem6.textContent = 'Contact';
 navItem6.href = '#';
 navLinks.appendChild(navItem6);
 
-const headerImg = document.createElement('img');
+const headerImg = document.querySelector('#logo-img');
 headerImg.src = 'http://localhost:9000/img/logo.png';
 headerEl.appendChild(headerImg);
 
+// cta section
+
+const ctaSection = document.querySelector('.cta');
+const ctaDiv = document.querySelector('.cta-text');
+const h1 = document.querySelector('.cta-text h1');
+h1.textContent = 'DOM Is Awesome';
+const ctaButton = document.querySelector('.cta button');
+ctaButton.textContent = 'Get Started';
+const ctaImg = document.querySelector('#cta-img');
+ctaImg.src = 'http://localhost:9000/img/cta.png';
